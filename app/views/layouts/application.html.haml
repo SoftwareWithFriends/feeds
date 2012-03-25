@@ -10,10 +10,11 @@
     = csrf_meta_tags
   %body
     #container.container
-      %header
-        = render 'layouts/navigation'
+      #header
+        %h1
+          = link_to 'Feeds', root_path
+      #content
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
-      #main{:role => "main"}
         = yield
       %footer
