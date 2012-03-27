@@ -18,5 +18,9 @@
       #content
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+
+        = form_for Subscription.new do |f|
+          = f.text_field :url
+          = f.submit "Add Feed"
         = yield
       %footer
