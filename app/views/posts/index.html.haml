@@ -1,4 +1,9 @@
 
 - @posts.each do |post|
   .post
-    = link_to post.title, post_path(post)
+    .row-fluid
+      %span.body
+        = link_to post.title, post_path(post)
+        %br
+        .details
+          posted by Peter Zimbelman

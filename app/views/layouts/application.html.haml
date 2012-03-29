@@ -9,18 +9,19 @@
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-    #container.container
+    .container
       #header
         %h1
           = link_to 'Feeds', root_path
         #description.italic
           An open RSS/ATOM feed aggregator
-      #content
-        - flash.each do |name, msg|
-          = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+      #content.row
+        .span8
+          - flash.each do |name, msg|
+            = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+          = yield
 
-        = form_for Subscription.new do |f|
-          = f.text_field :url
-          = f.submit "Add Feed"
-        = yield
+        .span3
+          = form_for Subscription.new do |f|
+            = f.text_field :url, :placeholder => "Add Feed"
       %footer

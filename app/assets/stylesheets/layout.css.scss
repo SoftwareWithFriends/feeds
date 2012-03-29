@@ -1,39 +1,6 @@
-html, body, div, span, object, iframe, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-
-body #header, body #content, body #author_controls {
-  margin: 0 auto;
-  width: 958px;
-  padding-right: 28px;
-  padding-left: 28px
-}
 
 #header {
   height: 65px;
-}
-
-#left_col {
-  width: 790px;
-  float: left;
-}
-
-#right_col {
-  width: 158px;
-  float: right; 
-}
-
-.personal_links {
-  a {
-    margin-right: 10px;
-    text-decoration: none;
-  }
 }
 
 .hidden {
@@ -48,14 +15,12 @@ body #header, body #content, body #author_controls {
   margin-bottom: 5px;
 }
 
-#description {
-  padding-left: 5px;
-  font-size: 11pt;
+.post {
+  font-size: 13pt;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .details {
+    padding-left: 5px;
+    font-size: 10pt;
+  }
 }
-
-code {
-  word-wrap: break-word;
-  overflow: auto;
-  width: 770px;
-  display: inline-block;
-} 
