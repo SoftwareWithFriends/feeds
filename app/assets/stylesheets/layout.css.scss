@@ -1,6 +1,10 @@
-
-#header {
-  height: 65px;
+body {
+  padding-top: 50px;
+}
+.main-title {
+  font-size: 15pt;
+  padding: 0;
+  margin: 0;
 }
 
 .hidden {
@@ -9,10 +13,6 @@
 
 .italic {
   font-style: italic;
-}
-
-#header h1 {
-  margin-bottom: 5px;
 }
 
 .post {

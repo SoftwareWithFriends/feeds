@@ -9,12 +9,13 @@
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-    .container
-      #header
-        %h1
-          = link_to 'Feeds', root_path
-        #description.italic
-          An open RSS/ATOM feed aggregator
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %h1.main-title
+            = link_to 'Feeds', root_path
+
+    .container      
       #content.row
         .span8
           - flash.each do |name, msg|
@@ -24,4 +25,7 @@
         .span3
           = form_for Subscription.new do |f|
             = f.text_field :url, :placeholder => "Add Feed"
+          %h5.description
+            Feeds is an open RSS/ATOM feed aggregator. You can learn more 
+            = link_to 'here.', '#'
       %footer
