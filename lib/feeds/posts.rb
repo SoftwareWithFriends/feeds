@@ -5,7 +5,7 @@ module Feeds
     end
 
     def to_collection_hashes
-      @entries.map { |entry| {:title => entry.title, :body => entry.content } }
+      @entries.map { |entry| {:title => entry.title, :body => entry.content, :author => entry.author } }
     end
   end
 end

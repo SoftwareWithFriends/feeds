@@ -1,4 +1,3 @@
-require 'open-uri'
 
 module Feeds
   class Reader
@@ -7,7 +6,7 @@ module Feeds
     end
 
     def content
-      FeedNormalizer::FeedNormalizer.parse open(@url)
+      Feedzirra::Feed.fetch_and_parse @url
     end
   end
 end

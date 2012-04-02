@@ -12,7 +12,7 @@ end
 gem 'jquery-rails'
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
-gem 'feed-normalizer'
+gem 'feedzirra'
 
 
 group :test, :development do
