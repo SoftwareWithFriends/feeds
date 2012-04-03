@@ -2,14 +2,18 @@ class Subscription
   include Mongoid::Document
 
   field :url, :type => String
-  embeds_many :posts
+  has_many :posts
 
   after_create :fetch_posts
 
+  def url_base
+    URI::parse(url).host
+  end
 
   private
   def fetch_posts
     posts = Feeds::Posts.new(Feeds::Reader.new(url).content.entries).to_collection_hashes
+    posts.map! { |post| post.merge(:subscription_id => self.id) }
     Post.collection.insert(posts)
   end
 end

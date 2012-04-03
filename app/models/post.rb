@@ -4,4 +4,5 @@ class Post
   field :title, :type => String
   field :body, :type => String 
   field :author, :type => String
+  belongs_to :subscription
 end
