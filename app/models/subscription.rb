@@ -2,7 +2,7 @@ class Subscription
   include Mongoid::Document
 
   field :url, :type => String
-  has_many :posts
+  has_many :posts, :dependent => :destroy
 
   after_create :fetch_posts
 
