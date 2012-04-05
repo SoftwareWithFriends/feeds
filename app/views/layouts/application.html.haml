@@ -25,6 +25,7 @@
         .span3
           = form_for Subscription.new do |f|
             = f.text_field :url, :placeholder => "Add Feed"
+            = f.submit "Add"
           %h5.description
             Feeds is an open RSS/ATOM feed aggregator. You can learn more 
             = link_to 'here.', '#'
