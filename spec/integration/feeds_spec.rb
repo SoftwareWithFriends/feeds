@@ -11,4 +11,5 @@ describe "navigating the site", :js => true do
       wait_until { Post.count == 3 }
     end
   end
+  
 end
