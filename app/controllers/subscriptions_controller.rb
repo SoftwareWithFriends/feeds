@@ -1,7 +1,7 @@
 class SubscriptionsController < ApplicationController
 
   def create
-    subscription = Service::Subscription.create_subscription(params[:subscription][:url])
+    Service::SubscriptionManager.new(params[:subscription][:url]).update!
     redirect_to root_url
   end
 end
