@@ -13,6 +13,8 @@ gem 'jquery-rails'
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem 'feedzirra'
+gem 'delayed_job'
+gem 'delayed_job_mongoid'
 
 
 group :test, :development do

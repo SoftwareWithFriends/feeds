@@ -14,4 +14,9 @@ class Subscription
     Post.collection.insert(post_hashes)
   end
 
+  def self.enqueue_all_update_jobs
+    all.each do |subscription|
+      Delayed::Job.enqueue UpdateSubscriptionJob.new(subscription.url)
+    end
+  end
 end
