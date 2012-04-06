@@ -21,11 +21,4 @@ describe "subscription service" do
       Service::Subscription.update_subscriptions([mock_subscription])
     end
   end
-  
-  
-  
-  
-
-
-  
 end
