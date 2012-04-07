@@ -1,5 +1,6 @@
 class Post
   include Mongoid::Document
+  scope :for_subscription, lambda { |sub_id| sub_id ? where(subscription_id: sub_id) : scoped }
 
   field :title, :type => String
   field :body, :type => String 

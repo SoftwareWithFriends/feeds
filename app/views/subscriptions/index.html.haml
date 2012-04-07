@@ -1,0 +1,5 @@
+
+- @subscriptions.each do |subscription|
+
+  %h2.subscription
+    = link_to subscription.name, subscription_posts_path(subscription)
