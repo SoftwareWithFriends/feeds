@@ -5,3 +5,8 @@
 require File.expand_path('../config/application', __FILE__)
 
 Feeds::Application.load_tasks
+
+desc "This task is called by the Heroku scheduler add-on"
+task :update_subscriptions => :environment do
+  Subscription.enqueue_all_update_jobs
+end
