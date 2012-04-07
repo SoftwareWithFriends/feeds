@@ -8,12 +8,16 @@
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag :application
     = csrf_meta_tags
+    
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
           %h1.main-title
             = link_to 'Feeds', root_path
+        = form_for Subscription.new, :html => {:class => "navbar-form pull-right span4"} do |f|
+          = f.text_field :url, :placeholder => "Add Feed"
+          = f.submit "Add"
 
     .container      
       #content.row
