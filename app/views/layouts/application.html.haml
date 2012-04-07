@@ -13,13 +13,16 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %h1.main-title
+          .brand
             = link_to 'Feeds', root_path
-        .pull-right.span4
-          = form_for Subscription.new, :html => {:class => "navbar-form"} do |f|
-            = f.text_field :url, :placeholder => "Add Feed"
-            = f.submit "Add"
-          = link_to 'All Feeds', subscriptions_path
+          %ul.nav
+            %li
+              = link_to 'All Feeds', subscriptions_path
+          .pull-right.span4
+            = form_for Subscription.new, :html => {:class => "navbar-form"} do |f|
+              = f.text_field :url, :placeholder => "Add Feed"
+              = f.submit "Add"
+
 
     .container      
       #content.row
