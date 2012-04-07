@@ -7,7 +7,7 @@ module Feeds
     def to_collection_hashes
       @entries.map { |entry| {:title => entry.title, :body => entry.content, 
                             :author => entry.author, :post_identifier => entry.id,
-                            :updated_at => entry.updated}}
+                            :updated_at => entry.updated, :published_at => entry.published }}
     end
   end
 end
