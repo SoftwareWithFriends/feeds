@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all.order("published_at DESC")
+    @posts = Post.page(params[:page]).order("published_at DESC").all
   end
 
   def show

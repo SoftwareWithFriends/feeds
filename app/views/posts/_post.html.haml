@@ -1,0 +1,8 @@
+.post
+  .row-fluid
+    %span.body
+      = link_to post.title, post_path(post)
+      %br
+      .details
+        = "posted by #{post.author}"
+        %span.source.italic= "(#{post.subscription.url_base})"
