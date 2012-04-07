@@ -1,4 +1,5 @@
 .post
+  =render("topics", :topics => @post.topics)
   %h3= @post.title
   .post_body
     = @post.body.html_safe
