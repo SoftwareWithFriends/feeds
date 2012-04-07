@@ -8,12 +8,16 @@
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag :application
     = csrf_meta_tags
+    
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
           %h1.main-title
             = link_to 'Feeds', root_path
+        = form_for Subscription.new, :html => {:class => "navbar-form pull-right span4"} do |f|
+          = f.text_field :url, :placeholder => "Add Feed"
+          = f.submit "Add"
 
     .container      
       #content.row
@@ -22,11 +26,6 @@
             = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
           = yield
 
-        .span3
-          = form_for Subscription.new do |f|
-            = f.text_field :url, :placeholder => "Add Feed"
-            = f.submit "Add"
-          %h5.description
-            Feeds is an open RSS/ATOM feed aggregator. You can learn more 
-            = link_to 'here.', '#'
+
+
       %footer
