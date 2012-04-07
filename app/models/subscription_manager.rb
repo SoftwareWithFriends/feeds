@@ -10,15 +10,19 @@ class SubscriptionManager
   end  
   
   def new_posts
-    posts = Service::Feed.get_posts_for(subscription)
-    filter_old_posts_for(subscription, posts)
+    filter_old_posts_for(subscription, feed.posts)
   end
 
   def update!
+    subscription.update_attributes(name: feed.title)
     subscription.add_posts new_posts
   end
   
   private
+
+  def feed
+    @feed ||= Service::Feed.get_posts_for(subscription)
+  end
   
   def filter_old_posts_for(subscription, posts)
     post_ids = subscription.posts.map(&:identifier)

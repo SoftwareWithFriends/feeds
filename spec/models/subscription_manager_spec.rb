@@ -6,6 +6,7 @@ describe SubscriptionManager do
   let(:mock_old_posts)        { [double("post1", identifier: 1)]}
   let(:mock_new_posts)    { [{id: 2}] } 
   let(:mock_posts)    { mock_new_posts + [{id: 1}]}
+  let(:mock_feed) { double("feed", posts: mock_posts, title: "Blog Name") }
   
   describe "when creating a new manager" do
     let(:manager) { SubscriptionManager.from_url(url) }
@@ -19,7 +20,7 @@ describe SubscriptionManager do
 
     describe "when fetching posts from the feed service" do
       before do
-        Service::Feed.should_receive(:get_posts_for).with(mock_subscription).and_return(mock_posts)
+        Service::Feed.should_receive(:get_posts_for).with(mock_subscription).and_return(mock_feed)
       end
 
       it "should know which posts are new" do
@@ -28,6 +29,7 @@ describe SubscriptionManager do
 
       it "should update the subscription with the new posts" do
         mock_subscription.should_receive(:add_posts).with(mock_new_posts)
+        mock_subscription.should_receive(:update_attributes).with(name: "Blog Name")
         manager.update!
       end
     end

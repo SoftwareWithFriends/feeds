@@ -2,6 +2,7 @@ class Subscription
   include Mongoid::Document
 
   field :url, :type => String
+  field :name, :type => String
   has_many :posts, :dependent => :destroy
   has_and_belongs_to_many :topics
 
