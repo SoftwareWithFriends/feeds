@@ -15,6 +15,7 @@ gem "haml-rails", ">= 0.3.4", :group => :development
 gem 'feedzirra'
 gem 'delayed_job'
 gem 'delayed_job_mongoid'
+gem 'heroku'
 
 
 group :test, :development do
