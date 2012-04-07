@@ -1,5 +1,5 @@
 class UpdateSubscriptionJob < Struct.new(:url)
   def perform
-    Service::SubscriptionManager.new(url).update!
+    SubscriptionManager.from_url(url).update!
   end
 end

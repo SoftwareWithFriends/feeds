@@ -1,6 +1,6 @@
-require_relative '../../spec_helper'
+require_relative '../spec_helper'
 
-describe Service::SubscriptionManager do
+describe SubscriptionManager do
   let(:url) { "http://mywebsite.com/feed" }
   let(:mock_subscription) { double("sub1", url: url, posts: mock_old_posts, id: 1) } 
   let(:mock_old_posts)        { [double("post1", identifier: 1)]}
@@ -8,7 +8,7 @@ describe Service::SubscriptionManager do
   let(:mock_posts)    { mock_new_posts + [{id: 1}]}
   
   describe "when creating a new manager" do
-    let(:manager) { Service::SubscriptionManager.new(url) }
+    let(:manager) { SubscriptionManager.from_url(url) }
     before do
       Subscription.stub(:find_or_create_by).with(url: url).and_return(mock_subscription) 
     end
