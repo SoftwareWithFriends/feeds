@@ -8,6 +8,8 @@ class Post
   field :post_identifier, :type => String
   field :updated_at, :type => DateTime
   field :published_at, :type => DateTime
+  field :summary, :type => String
+  field :url, :type => String
   belongs_to :subscription
   has_and_belongs_to_many :topics, :inverse_of => nil
   
