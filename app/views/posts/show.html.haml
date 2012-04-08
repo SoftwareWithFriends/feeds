@@ -3,4 +3,9 @@
     =render("topics")
   %h3= @post.title
   .post_body
-    = @post.body.html_safe
+    %p
+      = link_to "Full Original Post here....", @post.url
+    - if @post.body
+      = @post.body.html_safe
+    - else
+      = @post.summary.html_safe
