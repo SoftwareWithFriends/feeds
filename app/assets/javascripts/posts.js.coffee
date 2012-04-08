@@ -6,3 +6,19 @@ jQuery ->
         $('.pagination').text("Fetching more posts...")
         $.getScript(url)
     $(window).scroll()
+
+jQuery ->
+  $("#new_topic").submit (event) ->
+    form = $(this)
+    url = form.attr("action")
+    data = form.serialize()
+    
+    $.post(
+      url 
+      data 
+      (data) ->
+        if(data.added_to_post)
+          $(".topics").append('<a href="#" class="btn">'+data.name)
+        $("#topic_name").attr("value","")
+      "json")
+    return false

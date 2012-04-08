@@ -9,6 +9,10 @@ class Post
   field :updated_at, :type => DateTime
   field :published_at, :type => DateTime
   belongs_to :subscription
-  has_and_belongs_to_many :topics, :inverse_of => nil
+  has_and_belongs_to_many :topics
+  
+  def has_topic?(topic)
+    topic_ids.include? topic.id
+  end
   
 end

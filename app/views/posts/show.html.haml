@@ -1,5 +1,6 @@
 .post
-  =render("topics", :topics => @post.topics)
+  .post_meta.pull-left
+    =render("topics")
   %h3= @post.title
   .post_body
     = @post.body.html_safe

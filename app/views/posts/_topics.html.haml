@@ -1,6 +1,8 @@
-.span8.pull-left
-  Topics:
-  %ul
-    -topics.each do |topic|
-      %li=topic.name
-        
+.add_topic.pull-left
+  =form_for Topic.new :class => "clear" do |f|
+    = f.text_field :name, placeholder: "add topic...", class: "pull-left input-medium"
+    = hidden_field_tag :post_id, @post.to_param
+  
+.btn-toolbar.topics.pull-left
+  -@post.topics.each do |topic|
+    =link_to topic.name, "#", :class => "btn"
