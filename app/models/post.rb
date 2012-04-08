@@ -16,5 +16,8 @@ class Post
   def has_topic?(topic)
     topic_ids.include? topic.id
   end
-  
+
+  def content
+    body ? body : summary
+  end
 end

@@ -5,7 +5,4 @@
   .post_body
     %p
       = link_to "Full Original Post here....", @post.url
-    - if @post.body
-      = @post.body.html_safe
-    - else
-      = @post.summary.html_safe
+      = @post.content.html_safe
