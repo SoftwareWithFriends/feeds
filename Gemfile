@@ -17,6 +17,7 @@ gem 'delayed_job'
 gem 'delayed_job_mongoid'
 gem 'heroku'
 gem 'kaminari'
+gem 'devise'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
