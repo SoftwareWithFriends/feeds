@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.for_subscription(params[:subscription_id]).page(params[:page]).order("published_at DESC")
+    @posts = Post.for_subscription(params[:subscription_id]).page(params[:page]).desc(:published_at)
   end
 
   def show
