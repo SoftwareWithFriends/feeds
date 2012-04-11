@@ -3,8 +3,13 @@
     =render("topics")
   .clear
   %h3= @post.title
-  %p
-    = link_to "Full Original Post here....", @post.url
-  .post_body
-    %p
-      = @post.content.html_safe
+  .post_details
+    - unless @post.author.blank?
+      %span.author
+        = "posted by #{@post.author}"
+    %span.italic
+      = details_link_for(@post)
+  .post_body.well
+    = @post.content.html_safe
+  %h5
+    = link_to "The Original Post here can be found here.", @post.url

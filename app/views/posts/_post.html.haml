@@ -4,5 +4,4 @@
       = link_to post.title, subscription_post_path(post.subscription, post)
       %br
       .details
-        = "posted by #{post.author}"
-        %span.source.italic= "(#{post.subscription.url_base})"
+        = details_link_for post
