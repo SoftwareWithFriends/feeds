@@ -35,6 +35,16 @@ body {
       margin-bottom: 5px;
     }
 }
+
+.subscription_header {
+  h2 {
+    margin-bottom: 3px;
+  }
+  .details {
+    padding-left: 10px;
+  }
+  padding-bottom: 20px;
+}
 .pagination .current {
   float: left;
   padding: 0 14px;

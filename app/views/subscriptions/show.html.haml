@@ -1,0 +1,9 @@
+
+.subscription_header
+  %h2.title
+    = "Viewing posts for '#{@subscription.name}'"
+  .details
+    = "from (#{@subscription.url_base})"  
+
+.posts
+  = render @posts

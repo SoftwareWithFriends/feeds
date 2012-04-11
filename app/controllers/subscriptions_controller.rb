@@ -8,4 +8,9 @@ class SubscriptionsController < ApplicationController
   def index
     @subscriptions = Subscription.all.order("name")
   end
+
+  def show
+    @subscription = Subscription.find(params[:id])
+    @posts = @subscription.posts.desc(:published_at)
+  end
 end
