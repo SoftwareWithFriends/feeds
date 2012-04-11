@@ -1,7 +1,14 @@
-.post
+.post_row
   .row-fluid
-    %span.body
+    .body
       = link_to post.title, subscription_post_path(post.subscription, post)
       %br
       .details
-        = details_link_for post
+        %span
+          = details_link_for post
+        .clear
+        %span.post_controls
+          %a{:href => "#", :title => "Mark as Favorite"}
+            = image_tag "star.png", :height => 19, :width => 17
+          %a{:href => "#", :title => "Hide/Mark as Read"}
+            = image_tag "remove.png", :height => 13, :width => 13
