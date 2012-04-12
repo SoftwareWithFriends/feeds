@@ -9,4 +9,4 @@
         .clear
         %span.post_controls
           - post.topics.each do |topic|
-            = link_to topic.name, "#", :class => "btn btn-mini"
+            = link_to topic.name, topic_path(topic), :class => "btn btn-mini"

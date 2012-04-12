@@ -6,4 +6,4 @@
 .clear
 .btn-toolbar.topics.pull-left
   -@post.topics.each do |topic|
-    =link_to topic.name, "#", :class => "btn"
+    =link_to topic.name, topic_path(topic), :class => "btn btn-small"

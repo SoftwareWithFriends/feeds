@@ -6,5 +6,5 @@ Feeds::Application.routes.draw do
     resources :posts, :only => [:index, :show]
   end
   resources :posts, :only => [:index, :show]
-  resources :topics, :only => [:create]
+  resources :topics, :only => [:create, :show]
 end

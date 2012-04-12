@@ -11,5 +11,9 @@ class TopicsController < ApplicationController
        format.json { render :json => {added_to_post: added_to_post, name: name, found: manager.found} }
     end  
   end
-  
+
+  def show
+    @topic = Topic.find(params[:id])
+    @posts = @topic.posts.desc(:published_at)
+  end  
 end
