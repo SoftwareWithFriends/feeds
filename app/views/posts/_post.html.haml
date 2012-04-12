@@ -8,7 +8,5 @@
           = details_link_for post
         .clear
         %span.post_controls
-          %a{:href => "#", :title => "Mark as Favorite"}
-            = image_tag "star.png", :height => 19, :width => 17
-          %a{:href => "#", :title => "Hide/Mark as Read"}
-            = image_tag "remove.png", :height => 13, :width => 13
+          - post.topics.each do |topic|
+            = link_to topic.name, "#", :class => "btn btn-mini"
