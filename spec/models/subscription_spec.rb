@@ -10,9 +10,8 @@ describe Subscription do
     end
 
     it "should enqueue jobs for each subscription to update the posts" do
-      expect {
-        Subscription.enqueue_all_update_jobs
-      }.to change(Delayed::Job, :count).by(2)
+      Delayed::Job.should_receive(:enqueue).exactly(2).times
+      Subscription.enqueue_all_update_jobs
     end
   end
 end

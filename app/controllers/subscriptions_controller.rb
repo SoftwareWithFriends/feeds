@@ -2,7 +2,8 @@ class SubscriptionsController < ApplicationController
   rescue_from Feeds::InvalidFeed, :with => :handle_invalid_feed 
 
   def create
-    SubscriptionManager.from_url(params[:subscription][:url]).update!
+    SubscriptionManager.from_url(params[:subscription][:url]).delay.update!
+    flash[:notice] = "Feed added successfully! The posts for this feed should begin showing up shortly."
     redirect_to root_url
   end
 
