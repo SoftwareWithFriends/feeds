@@ -11,6 +11,12 @@ class TopicManager
     end
     new(topic, found)
   end
+
+  def self.ids_from_names(names)
+    names.map do |name|
+      Topic.find_or_create_by(name: name).id
+    end
+  end
   
   def initialize(topic, found)
     @topic = topic

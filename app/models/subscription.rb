@@ -12,7 +12,9 @@ class Subscription
   
   def add_posts(post_hashes)
     post_hashes.map! {|post| post.merge({subscription_id: id})}
-    Post.collection.insert(post_hashes)
+    post_hashes.each do |hash| 
+      Post.create!(hash)
+    end
   end
 
   def self.enqueue_all_update_jobs

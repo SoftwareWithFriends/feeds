@@ -31,4 +31,16 @@ describe TopicManager do
     post.topics.count.should == 1
   end
     
+  describe "when trying to look up topics from a set of names" do
+    let(:first_topic) { double("topic1", id: "abc") }
+    let(:second_topic) { double("topic2", id: "def") }
+    let(:mock_topics) {[first_topic, second_topic] }
+    before do
+      Topic.stub(:find_or_create_by).and_return(first_topic, second_topic)
+    end
+
+    it "should return a list of topics" do
+      TopicManager.ids_from_names(["blah1", "blah2"]).should == ["abc", "def"]
+    end
+  end
 end
