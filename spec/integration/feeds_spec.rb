@@ -15,11 +15,20 @@ describe "navigating the site", :js => true do
       expect {
         click_on "Add"
       }.to change(Post, :count).by(3)
-      page.should have_css(".post", :count => 6)
+      page.should have_css(".post_row", :count => 6)
 
       click_on "All Feeds"
       click_on "Ambitious Apathy"
-      page.should have_css(".post", :count => 3)
+      page.should have_css(".post_row", :count => 3)
+    end
+  end
+
+  it "should show an error when trying to add an invalid feed" do
+    VCR.use_cassette('feeds_spec') do
+      visit "/"
+      fill_in "subscription_url", :with => "http://foobar"
+      click_on "Add"
+      page.should have_content("not a valid RSS/ATOM feed")
     end
   end
   

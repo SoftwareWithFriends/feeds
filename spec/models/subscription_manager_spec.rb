@@ -11,6 +11,7 @@ describe SubscriptionManager do
   describe "when creating a new manager" do
     let(:manager) { SubscriptionManager.from_url(url) }
     before do
+      Service::Feed.should_receive(:get_posts_for).with(url).and_return(mock_feed)
       Subscription.stub(:find_or_create_by).with(url: url).and_return(mock_subscription) 
     end
 
@@ -19,9 +20,6 @@ describe SubscriptionManager do
     end
 
     describe "when fetching posts from the feed service" do
-      before do
-        Service::Feed.should_receive(:get_posts_for).with(mock_subscription).and_return(mock_feed)
-      end
 
       it "should know which posts are new" do
         manager.new_posts.should == mock_new_posts
