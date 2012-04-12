@@ -3,6 +3,7 @@
     = f.text_field :name, placeholder: "add topic...", class: "pull-left input-medium"
     = hidden_field_tag :post_id, @post.to_param
   
+.clear
 .btn-toolbar.topics.pull-left
   -@post.topics.each do |topic|
     =link_to topic.name, "#", :class => "btn"
