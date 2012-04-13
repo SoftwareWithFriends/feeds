@@ -12,12 +12,12 @@ end
 gem 'jquery-rails'
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
-gem 'feedzirra'
 gem 'delayed_job'
 gem 'delayed_job_mongoid'
 gem 'heroku'
 gem 'kaminari'
 gem 'devise'
+gem 'feedzirra', :git => "https://github.com/SoftwareWithFriends/feedzirra.git" #use our fork for now due to dependency issue on active support in main repo
 
 group :test, :development do
   gem "rspec-rails", "~> 2.6"
