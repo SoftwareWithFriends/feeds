@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/SoftwareWithFriends/feedzirra.git
-  revision: 82ef803403923f26946512ecad0ebebd0b9205ef
+  revision: 796df7b1012bc5070f2f6dc30e87177afa7cb30e
   specs:
     feedzirra (0.1.3)
       activesupport (~> 3.1)

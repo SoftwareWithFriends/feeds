@@ -4,7 +4,7 @@ describe Feeds::Reader do
   let(:url) { "http://blog.com/feed" }
   describe "with a valid feed that returns data" do
     before do
-      Feedzirra::Feed.should_receive(:fetch_and_parse).with(url).and_return("feed data")
+      Feedzirra::Feed.should_receive(:easy_fetch_and_parse).with(url).and_return("feed data")
     end
 
     it "should use feed normalizer to fetch feed data" do
@@ -15,7 +15,7 @@ describe Feeds::Reader do
 
   describe "with an invalid feed that returns nil from Feedzirra" do
     before do
-      Feedzirra::Feed.should_receive(:fetch_and_parse).with(url).and_return(nil)
+      Feedzirra::Feed.should_receive(:easy_fetch_and_parse).with(url).and_return(nil)
     end
 
     it "should use feed normalizer to fetch feed data" do
@@ -26,7 +26,7 @@ describe Feeds::Reader do
 
   describe "with an invalid url that returns 0 from Feedzirra" do
     before do
-      Feedzirra::Feed.should_receive(:fetch_and_parse).with(url).and_return(0)
+      Feedzirra::Feed.should_receive(:easy_fetch_and_parse).with(url).and_return(0)
     end
 
     it "should use feed normalizer to fetch feed data" do

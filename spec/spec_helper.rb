@@ -11,12 +11,14 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 VCR.configure do |c|
   c.ignore_hosts '127.0.0.1', 'localhost'
-  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.cassette_library_dir = 'spec/vcr_cassettes'
   c.hook_into :webmock # or :fakeweb
+  c.configure_rspec_metadata!
 end
 
 RSpec.configure do |config|
   config.include Mongoid::Matchers
+  config.treat_symbols_as_metadata_keys_with_true_values = true
   config.before do |group|
     Mongoid.master.collections.select {|c| c.name !~ /system/ }.each(&:drop)
   end

@@ -1,12 +1,12 @@
 require_relative '../spec_helper'
 
-describe "navigating the site", :js => true do
+describe "navigating the site", :vcr, :js => true do
 
   it "should allow adding a feed and viewing just that feeds posts" do
     visit "/"
     page.should have_content("Feeds")
-    fill_in "subscription_url", :with => "http://ambitiousapathy.com/feed"
     expect {
+      fill_in "subscription_url", :with => "http://ambitiousapathy.herokuapp.com/feed"
       click_on "Add"
     }.to change(Post, :count).by(4)
 

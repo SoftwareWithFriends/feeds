@@ -6,7 +6,7 @@ module Feeds
     end
 
     def content
-      result = Feedzirra::Feed.fetch_and_parse @url
+      result = Feedzirra::Feed.easy_fetch_and_parse @url
       raise InvalidFeed if invalid?(result)
       result
     end
