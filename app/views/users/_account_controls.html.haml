@@ -1,0 +1,10 @@
+%li.dropdown#account_menu
+  %a{:href => "#account_menu", :"data-toggle" => 'dropdown', :class => "dropdown-toggle"}
+    Account
+    %b.caret
+  %ul.dropdown-menu
+    %li
+      = link_to 'Saved Posts', '#'
+    %li
+      = link_to 'Sign out', destroy_user_session_path, :method => :delete
+      

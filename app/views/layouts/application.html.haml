@@ -19,13 +19,10 @@
             %li
               = link_to 'All Feeds', subscriptions_path
             - if user_signed_in?
-              %li
-                = link_to 'Sign out', destroy_user_session_path, :method => :delete
+              = render 'users/account_controls'
             - else
               %li
-                = link_to 'Sign in', new_user_session_path
-              %li
-                = link_to 'Register', new_user_registration_path
+                = link_to 'Sign in or Register', new_user_session_path
           .pull-right.span4
             = form_for Subscription.new, :html => {:class => "navbar-form"} do |f|
               = f.text_field :url, :placeholder => "Add Feed"
