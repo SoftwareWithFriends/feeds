@@ -18,7 +18,7 @@ jQuery ->
       data 
       (data) ->
         if(data.added_to_post)
-          $(".topics").append('<a href="#" class="btn">'+data.name)
+          $(".topics").append('<a href="#" class="btn topic">'+data.name)
         $("#topic_name").attr("value","")
       "json")
     return false

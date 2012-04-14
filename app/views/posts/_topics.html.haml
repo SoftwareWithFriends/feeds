@@ -1,8 +1,10 @@
 .add_topic.pull-left
-  =form_for Topic.new :class => "clear" do |f|
+  =form_for Topic.new do |f|
     = f.text_field :name, placeholder: "add topic...", class: "pull-left input-medium"
     = hidden_field_tag :post_id, @post.to_param
+    = f.submit "Add Topic"
+    
   
 .btn-toolbar.topics.pull-left
   -@post.topics.each do |topic|
-    =link_to topic.name, "#", :class => "btn"
+    =link_to topic.name, "#", :class => "btn topic"
