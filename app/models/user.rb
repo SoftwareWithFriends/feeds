@@ -4,6 +4,7 @@ class User
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_and_belongs_to_many :saved_posts, :class_name => 'Post', :inverse_of => nil
 
   ## Database authenticatable
   field :email,              :type => String, :null => false, :default => ""

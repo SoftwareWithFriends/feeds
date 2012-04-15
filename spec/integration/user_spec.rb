@@ -5,7 +5,7 @@ describe "with a user that exists" do
 
   it "should allow a user to sign in and sign out" do
     visit "/"
-    click_on "Sign in"
+    click_on "Sign in or Register"
     fill_in "Email", :with => user.email
     fill_in "Password", :with => "password"
     click_button "Sign in"

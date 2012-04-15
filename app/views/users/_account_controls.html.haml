@@ -4,7 +4,7 @@
     %b.caret
   %ul.dropdown-menu
     %li
-      = link_to 'Saved Posts', '#'
+      = link_to 'Saved Posts', user_favorites_path(current_user)
     %li
       = link_to 'Sign out', destroy_user_session_path, :method => :delete
       

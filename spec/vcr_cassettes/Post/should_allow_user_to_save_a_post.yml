@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://feeds-test.herokuapp.com/feed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - feedzirra http://github.com/pauldix/feedzirra/tree/master
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0sg
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0wLCBwcml2YXRlLCBtdXN0LXJldmFsaWRhdGU=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vYXRvbSt4bWw7IGNoYXJzZXQ9dXRmLTg=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U2F0LCAxNCBBcHIgMjAxMiAyMDozOTowNSBHTVQ=
+      !binary "RXRhZw==":
+      - !binary |-
+        ImYyYmViZjU1NjJjZmNjNjY0YmQ3ZTUxMTljNDk5ZWI5Ig==
+      !binary "U2VydmVy":
+      - !binary |-
+        V0VCcmljay8xLjMuMSAoUnVieS8xLjkuMi8yMDExLTA3LTA5KQ==
+      !binary "WC1SYWNrLUNhY2hl":
+      - !binary |-
+        bWlzcw==
+      !binary "WC1SdW50aW1l":
+      - !binary |-
+        MC4wMjc0MDE=
+      !binary "WC1VYS1Db21wYXRpYmxl":
+      - !binary |-
+        SUU9RWRnZSxjaHJvbWU9MQ==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MTcyNQ==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGZlZWQg
+        eG1sOmxhbmc9ImVuLVVTIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAw
+        NS9BdG9tIj4KICA8aWQ+dGFnOmZlZWRzLXRlc3QuaGVyb2t1YXBwLmNvbSwy
+        MDA1Oi9mZWVkPC9pZD4KICA8bGluayByZWw9ImFsdGVybmF0ZSIgdHlwZT0i
+        dGV4dC9odG1sIiBocmVmPSJodHRwOi8vZmVlZHMtdGVzdC5oZXJva3VhcHAu
+        Y29tIi8+CiAgPGxpbmsgcmVsPSJzZWxmIiB0eXBlPSJhcHBsaWNhdGlvbi9h
+        dG9tK3htbCIgaHJlZj0iaHR0cDovL2ZlZWRzLXRlc3QuaGVyb2t1YXBwLmNv
+        bS9mZWVkIi8+CiAgPHRpdGxlPkEgRmFrZSBCbG9nPC90aXRsZT4KICA8dXBk
+        YXRlZD4yMDEyLTAzLTI3VDA1OjAzOjQzWjwvdXBkYXRlZD4KICA8ZW50cnk+
+        CiAgICA8aWQ+dGFnOmZlZWRzLXRlc3QuaGVyb2t1YXBwLmNvbSwyMDA1OlBv
+        c3QvMzwvaWQ+CiAgICA8cHVibGlzaGVkPjIwMTItMDMtMjdUMDU6MDM6NDNa
+        PC9wdWJsaXNoZWQ+CiAgICA8dXBkYXRlZD4yMDEyLTAzLTI3VDA1OjAzOjQz
+        WjwvdXBkYXRlZD4KICAgIDxsaW5rIHJlbD0iYWx0ZXJuYXRlIiB0eXBlPSJ0
+        ZXh0L2h0bWwiIGhyZWY9Imh0dHA6Ly9mZWVkcy10ZXN0Lmhlcm9rdWFwcC5j
+        b20vcG9zdHMvMyIvPgogICAgPHRpdGxlPlRlc3RpbmcgZmVlZHM8L3RpdGxl
+        PgogICAgPGNvbnRlbnQgdHlwZT0iaHRtbCI+Jmx0O3AmZ3Q7WW91IGhlYXJk
+        IG1lJmx0Oy9wJmd0Owo8L2NvbnRlbnQ+CiAgICA8YXV0aG9yPgogICAgICA8
+        bmFtZT5Tb21lIEd1eTwvbmFtZT4KICAgIDwvYXV0aG9yPgogIDwvZW50cnk+
+        CiAgPGVudHJ5PgogICAgPGlkPnRhZzpmZWVkcy10ZXN0Lmhlcm9rdWFwcC5j
+        b20sMjAwNTpQb3N0LzI8L2lkPgogICAgPHB1Ymxpc2hlZD4yMDEyLTAzLTI3
+        VDA0OjU1OjI2WjwvcHVibGlzaGVkPgogICAgPHVwZGF0ZWQ+MjAxMi0wMy0y
+        N1QwNDo1NjozMVo8L3VwZGF0ZWQ+CiAgICA8bGluayByZWw9ImFsdGVybmF0
+        ZSIgdHlwZT0idGV4dC9odG1sIiBocmVmPSJodHRwOi8vZmVlZHMtdGVzdC5o
+        ZXJva3VhcHAuY29tL3Bvc3RzLzIiLz4KICAgIDx0aXRsZT5BIFNlY29uZCBQ
+        b3N0PC90aXRsZT4KICAgIDxjb250ZW50IHR5cGU9Imh0bWwiPiZsdDtwJmd0
+        O0p1c3QgYW5vdGhlciBwb3N0IHdpdGggc29tZSBjb250ZW50Jmx0Oy9wJmd0
+        Owo8L2NvbnRlbnQ+CiAgICA8YXV0aG9yPgogICAgICA8bmFtZT5Tb21lIEd1
+        eTwvbmFtZT4KICAgIDwvYXV0aG9yPgogIDwvZW50cnk+CiAgPGVudHJ5Pgog
+        ICAgPGlkPnRhZzpmZWVkcy10ZXN0Lmhlcm9rdWFwcC5jb20sMjAwNTpQb3N0
+        LzE8L2lkPgogICAgPHB1Ymxpc2hlZD4yMDEyLTAzLTI3VDA0OjU1OjEwWjwv
+        cHVibGlzaGVkPgogICAgPHVwZGF0ZWQ+MjAxMi0wMy0yN1QwNDo1Njo0NFo8
+        L3VwZGF0ZWQ+CiAgICA8bGluayByZWw9ImFsdGVybmF0ZSIgdHlwZT0idGV4
+        dC9odG1sIiBocmVmPSJodHRwOi8vZmVlZHMtdGVzdC5oZXJva3VhcHAuY29t
+        L3Bvc3RzLzEiLz4KICAgIDx0aXRsZT5KdXN0IGEgdGVzdCBwb3N0PC90aXRs
+        ZT4KICAgIDxjb250ZW50IHR5cGU9Imh0bWwiPiZsdDtwJmd0O0EgcG9zdCBm
+        b3IgdGhlIGFnZXMhJmx0Oy9wJmd0OwoKJmx0O2gyJmd0O0ZvciByZWFsISBB
+        IGhlYWRlciEmbHQ7L2gyJmd0Owo8L2NvbnRlbnQ+CiAgICA8YXV0aG9yPgog
+        ICAgICA8bmFtZT5Tb21lIEd1eTwvbmFtZT4KICAgIDwvYXV0aG9yPgogIDwv
+        ZW50cnk+CjwvZmVlZD4K
+    http_version: 
+  recorded_at: Sat, 14 Apr 2012 20:39:05 GMT
+recorded_with: VCR 2.0.1

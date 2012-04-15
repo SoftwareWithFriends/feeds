@@ -7,6 +7,10 @@
     %span.italic
       = details_link_for(@post)
     .clear
+    %span.controls
+      = link_to(image_tag("star.png"), 
+                 user_favorites_path(current_user, :post_id => @post.id) ,
+                 :title => "Save this post", :method => :post, :id => "save_post")
     .post_meta.pull-left
       =render("topics")
   .clear
