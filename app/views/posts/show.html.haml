@@ -11,9 +11,10 @@
       =render("topics")
   .clear
   .controls
-    = link_to(image_tag("star.png"), 
-               user_favorites_path(current_user, :post_id => @post.id) ,
-               :title => "Save this post", :method => :post, :id => "save_post")
+    - if user_signed_in?
+      = link_to(image_tag("star.png"), 
+                 user_favorites_path(current_user, :post_id => @post.id) ,
+                 :title => "Save this post", :method => :post, :id => "save_post")
   .post_body.well
     = @post.content.html_safe
   %h5
