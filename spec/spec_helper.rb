@@ -15,6 +15,7 @@ VCR.configure do |c|
   c.hook_into :webmock # or :fakeweb
   c.configure_rspec_metadata!
 end
+Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
   config.include Mongoid::Matchers

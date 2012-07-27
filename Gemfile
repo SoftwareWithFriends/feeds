@@ -26,6 +26,7 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'mongoid-rspec'
   gem 'vcr'
   gem 'webmock'
